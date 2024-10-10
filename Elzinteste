@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajudacmsp</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #000428, #004e92); /* Gradiente de azul para preto */
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+<p align="center">$${\color{green}ESTE \space WEBSITE \space NÃO \space APRESENTA \space NENHUM \space RISCO \space DE \space BLOQUEIAR \space SUA \space CONTA \space DO \space CMSP}$$</p>
+<p align="center">$${\color{orange}CASO \space O \space CMSP \space KILLER \space NÃO \space FUNCIONE, \space USE \space O \space CMSP \space CHEETO. \space ELE \space COM \space CERTEZA \space IRÁ \space FUNCIONAR}$$</p>
+
+---
+
+<a href="#"><img width="100%" src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=30&duration=1&pause=1000&color=0d1117&center=true&vCenter=true&repeat=false&width=435&height=30&lines=CMSP+Tareafas"/>
+<a href="#"><img width="100%" src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=30&duration=1&pause=1000&color=FFFFFF&center=true&vCenter=true&repeat=false&width=435&height=30&lines=CMSP+Tareafas"/>
+
+<br>
+
+<div align="center">
+  <a href="https://darkmod3.github.io/CMSPKiller/" target="_blank"><img src="https://img.shields.io/badge/-CMSP Killer-A020F0?style=for-the-badge&logo=htmx&logoColor=white"></a>
+  &#8287;&#8287;&#8287;&#8287;&#8287;
+  <a href="https://cmsp-cheeto-v2.vercel.app/" target="_blank"><img src="https://img.shields.io/badge/-CMSP Cheeto-4169e1?style=for-the-badge&logo=htmx&logoColor=white"></a>
+</div>
+
+<br>
+
+---
+
+<p align="center">Website para realizar automaticamente as tarefas do CMSP (novas e expiradas). Para utilizá-lo, basta clicar no botão acima e seguir as instruções que estão lá!<br><br><strong>( Créditos:  marcos10pc )</strong></p>
+
+        /* Estilos do cabeçalho */
+        header {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.3); /* Fundo 30% transparente */
+            padding: 20px 0;
+            text-align: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        header h1 {
+            color: #fff;
+            font-size: 2em;
+            margin: 0;
+        }
+
+        .menu {
+            display: none; /* Menu não será mostrado antes do login */
+            position: relative;
+            cursor: pointer;
+        }
+
+        .menu-dot {
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 2px;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            opacity: 0; /* Inicia oculto */
+            transition: opacity 0.3s ease; /* Animação suave */
+        }
+
+        .dropdown.show {
+            display: block;
+            opacity: 1; /* Exibe com opacidade */
+        }
+
+        .dropdown a {
+            display: block;
+            padding: 10px 15px;
+            color: #fff;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .dropdown a:hover {
+            background: rgba(0, 78, 146, 0.5);
+        }
+
+        .login-container, .main-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            max-width: 400px;
+            width: 90%;
+        }
+
+        h1.large-text, h2 {
+            text-align: center;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .login-box input[type="text"], 
+        .login-box input[type="password"], 
+        .group input[type="text"], 
+        .group input[type="password"] {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            padding: 12px;
+            margin: 10px 0;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        .login-box input[type="submit"], 
+        .button-group input[type="button"] {
+            background: linear-gradient(135deg, #004e92, #000428); /* Gradiente de azul para preto */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 12px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+            width: 100%;
+            margin-top: 15px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); /* Sombra branca brilhante */
+        }
+
+        .login-box input[type="submit"]:hover, 
+        .button-group input[type="button"]:hover {
+            background: #fff;
+            color: #004e92;
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.5); /* Aumenta o brilho ao passar o mouse */
+            border: 2px solid #004e92;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #fff;
+            font-size: 0.9em;
+        }
+
+        .main-content {
+            display: none;
+        }
+
+        .switch-link {
+            color: #004e92;
+            cursor: pointer;
+            text-decoration: underline;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho com fundo 30% transparente -->
+    <header>
+        <h1>Ajudacmsp</h1>
+        <div class="menu" id="menu">
+            <div class="menu-dot"></div>
+            <div class="menu-dot"></div>
+            <div class="menu-dot"></div>
+            <div class="dropdown" id="dropdown">
+                <a href="#como-funciona" onclick="showComoFunciona()">Como funciona?</a>
+                <a href="#nossa-proposta" onclick="showNossaProposta()">Nossa proposta</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="login-container" id="register-container">
+        <div class="login-box">
+            <h2>Cadastro</h2>
+            <form action="#" method="post" onsubmit="event.preventDefault(); registerUser();">
+                <input type="text" id="new-username" placeholder="Escolha um Usuário" required>
+                <input type="password" id="new-password" placeholder="Escolha uma Senha" required>
+                <input type="submit" value="Criar Conta">
+            </form>
+            <p class="switch-link" onclick="toggleForms('login')">Já tem uma conta? Faça login</p>
+        </div>
+    </div>
+
+    <div class="login-container" id="login-container" style="display: none;">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form action="#" method="post" onsubmit="event.preventDefault(); loginUser();">
+                <input type="text" id="login-username" placeholder="Usuário" required>
+                <input type="password" id="login-password" placeholder="Senha" required>
+                <input type="submit" value="Entrar">
+            </form>
+            <p class="switch-link" onclick="toggleForms('register')">Não tem uma conta? Cadastre-se</p>
+        </div>
+    </div>
+
+    <div class="main-content" id="main-content">
+        <h1 class="large-text">Elzinxsp</h1>
+        <h2>Use somente se precisar</h2>
+
+        <div class="group">
+            <input type="text" id="name" placeholder="RA + digito + UF" required>
+        </div>
+        <div class="group">
+            <input type="password" id="password" placeholder="Senha" required>
+        </div>
+
+        <div class="button-group">
+            <input type="button" value="Fazer Licoes Novas" onclick="alert('Iniciando lições normais...')">
+            <input type="button" value="Fazer Licoes Expiradas" onclick="alert('Iniciando lições atrasadas...')">
+        </div>
+    </div>
+
+    <script>
+        function toggleDropdown() {
+            const dropdown = document.getElementById('dropdown');
+            dropdown.classList.toggle('show');
+        }
+
+        function showComoFunciona() {
+            alert("Somente fazer login e senha com o RA, não temos acesso aos seus dados. Fazendo isso automaticamente será feita suas lições do aplicativo de tarefas🌟");
+            toggleDropdown(); // Fecha o menu após selecionar
+        }
+
+        function showNossaProposta() {
+            alert("Nossa proposta é ajudar somente quando necessário, lembre-se não é legal usar aplicativos que respondem automaticamente para você, recomendamos fazer por conta própria para não prejudicar seu aprendizado e vida acadêmica. Somente será disponibilizado esse arquivo para pessoas que realmente precisam😉💫");
+            toggleDropdown(); // Fecha o menu após selecionar
+        }
+
+        function toggleForms() {
+            const registerContainer = document.getElementById('register-container');
+            const loginContainer = document.getElementById('login-container');
+            registerContainer.style.display = registerContainer.style.display === 'none' ? 'flex' : 'none';
+            loginContainer.style.display = loginContainer.style.display === 'none' ? 'flex' : 'none';
+        }
+
+        function registerUser() {
+            const username = document.getElementById('new-username').value;
+            const password = document.getElementById('new-password').value;
+            alert(`Usuário ${username} cadastrado com sucesso!`);
+            toggleForms();
+        }
+
+        function loginUser() {
+            const username = document.getElementById('login-username').value;
+            const password = document.getElementById('login-password').value;
+
+            if (username === "alunospaulino" && password === "Educacao24") {
+                alert('Login realizado com sucesso!');
+                showMainContent();
+            } else {
+                alert('Usuário ou senha incorretos!');
+            }
+        }
+
+        function showMainContent() {
+            document.getElementById('register-container').style.display = 'none';
+            document.getElementById('login-container').style.display = 'none';
+            document.getElementById('main-content').style.display = 'flex';
+        }
+    </script>
+</body>
+</html>
